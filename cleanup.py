@@ -20,7 +20,7 @@ def parse_images(lines):
     for line in lines:
         try:
             image_name, version = line.split(' ')
-            version_num = float(version.replace('v', ''))
+            version_num = int(version.replace('v', ''))
             images[image_name].append(version_num)
         except ValueError:
             pass
@@ -29,8 +29,7 @@ def parse_images(lines):
 
 
 def remove_image(image_name):
-    # subprocess.call(['docker', 'rm', image_name])
-    print('docker rm ' + image_name)
+    subprocess.check_call(['docker', 'rm', image_name])
 
 
 def all_images():
