@@ -29,7 +29,10 @@ def parse_images(lines):
 
 
 def remove_image(image_name):
-    subprocess.check_call(['docker', 'rmi', image_name])
+    try:
+        subprocess.check_call(['docker', 'rmi', image_name])
+    except subprocess.CalledProcessError as e:
+        print(e.output)
 
 
 def all_images():
