@@ -35,7 +35,12 @@ only remove the image `10.21.2.170:5000/zermatt-microsite:v2`
 10.21.2.170:5000/zermatt-microsite:v2
 ```
 
-## Integrate into Fleet
+## Daily Fleet Schedule
 
 You can use the `cleanup-images.service` file together with the `cleanup-iamges.timer` unit
-to regularly schedule a cleanup of your machines.
+to regularly schedule a cleanup of your machines via `fleet`.
+
+```bash
+fleetctl start cleanup-images
+fleetctl start cleanup-images.timer
+```
