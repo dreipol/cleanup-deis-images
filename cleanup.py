@@ -29,7 +29,7 @@ def parse_images(lines):
 
 
 def remove_image(image_name):
-    subprocess.check_call(['docker', 'rm', image_name])
+    subprocess.check_call(['docker', 'rmi', image_name])
 
 
 def all_images():
@@ -45,3 +45,4 @@ if __name__ == '__main__':
     images = all_images()
     for image_name in find_obsolete_images(images):
         remove_image(image_name)
+        print('Removed image {}'.format(image_name))
