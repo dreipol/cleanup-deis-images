@@ -45,4 +45,3 @@ if __name__ == '__main__':
     images = all_images()
     for image_name in find_obsolete_images(images):
         remove_image(image_name)
-        print('Removed image {}'.format(image_name))
