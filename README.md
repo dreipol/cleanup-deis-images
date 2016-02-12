@@ -34,3 +34,8 @@ only remove the image `10.21.2.170:5000/zermatt-microsite:v2`
 10.21.2.170:5000/zermatt-microsite:v3
 10.21.2.170:5000/zermatt-microsite:v2
 ```
+
+## Integrate into Fleet
+
+You can use the `cleanup-images.service` file together with the `cleanup-iamges.timer` unit
+to regularly schedule a cleanup of your machines.
