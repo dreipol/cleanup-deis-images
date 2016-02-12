@@ -1,0 +1,9 @@
+[Unit]
+Description=cleanup-images
+Requires=docker.service
+
+[Timer]
+OnCalendar=daily
+
+[X-Fleet]
+Global=true
