@@ -11,7 +11,7 @@ def find_obsolete_images(images):
         if len(versions) > KEEP_LAST_VERSIONS:
             obsolete_versions = sorted(versions, reverse=True)[4:]
             for version in obsolete_versions:
-                yield '{}:{}'.format(image_name, version)
+                yield '{}:v{}'.format(image_name, version)
 
 
 def parse_images(lines):
