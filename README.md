@@ -1,4 +1,4 @@
-## Delete old Releases of Docker Images
+## Delete old Releases of Docker Images [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dreipol/cleanup-deis-images/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/dreipol/cleanup-deis-images/?branch=master) ![License](https://img.shields.io/badge/license-MIT%20License-blue.svg)
 
 If you release often your build server will collect a large amount of images that are no longer used.
 This script keeps your Deis cluster slick by removing app versions that are older than *n* releases.
