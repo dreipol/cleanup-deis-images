@@ -9,7 +9,7 @@ You need to mount the docker socket into the container in order for the script
 to access and cleanup the images.
 
 ```bash
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock dreipol/cleanup-versions
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock quipper/cleanup-deis-images
 ```
 
 ## Configure
@@ -20,7 +20,7 @@ the `KEEP_LAST_VERSIONS` env var.
 ```bash
 docker run --rm \
  -v /var/run/docker.sock:/var/run/docker.sock \
- -e KEEP_LAST_VERSIONS=3 dreipol/cleanup-versions
+ -e KEEP_LAST_VERSIONS=3 quipper/cleanup-deis-images
 ```
 
 If you have images from `v2` up to `v6` the script will remove all images

@@ -9,10 +9,10 @@ EnvironmentFile=/etc/environment
 Type=oneshot
 ExecStartPre=-/usr/bin/docker kill %p-%i
 ExecStartPre=-/usr/bin/docker rm %p-%i
-ExecStartPre=/usr/bin/docker pull dreipol/cleanup-deis-images
+ExecStartPre=/usr/bin/docker pull quipper/cleanup-deis-images
 ExecStart=/usr/bin/docker run --rm --name %p \
  -v /var/run/docker.sock:/var/run/docker.sock \
- -t dreipol/cleanup-deis-images
+ -t quipper/cleanup-deis-images
 ExecStop=/usr/bin/docker stop %p-%i
 
 [X-Fleet]
