@@ -3,7 +3,7 @@ from collections import defaultdict
 import subprocess
 import os
 
-KEEP_LAST_VERSIONS = os.environ.get('KEEP_LAST_VERSIONS', 4)
+KEEP_LAST_VERSIONS = int(os.environ.get('KEEP_LAST_VERSIONS', 4))
 
 
 def find_obsolete_images(images):
